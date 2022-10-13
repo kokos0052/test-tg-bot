@@ -59,6 +59,7 @@ bot.on("message", async (msg) => {
 
 app.post("/web-data", async (req, res) => {
   const { queryId, products, price } = req;
+  console.log(`here`, queryId, price);
   try {
     await bot.answerWebAppQuery(queryId, {
       type: "article",
